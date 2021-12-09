@@ -14,3 +14,7 @@ In the previous challenges, I was able to just do one pass through the input wit
 The time complexity of this solution is O(nm^2), where n is the number of binary strings and m is the length of each binary string. To see why, consider the worst case scenario, where we have to iterate over and swap every single element in the list m times.
 
 Space complexity is O(nm), from reading the entire input into memory.
+
+### Day 4, part 1
+
+This challenge was pretty straight-forward, but instead of doing the obvious and making a grid for each board, I realized that all we're really interested in is whether the chosen numbers fill up a row or column. So I created a hashmap of numbers to boards, and incremented counters pertaining to the row and column they're in. This means I don't have to search through every board to find instances of the numbers, but instead can access them in constant time.
