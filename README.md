@@ -22,3 +22,7 @@ This challenge was pretty straight-forward, but instead of doing the obvious and
 ### Day 5, part 1
 
 I started off with doing a solution that was optimal as possible (e.g. having lists of intervals rather than actually making the whole grid). But that was so much of a pain that I switched to just making a grid, and I'm glad I did since that was enough of a pain itself.
+
+### Day 6, part 1
+
+The key to this one is to realize that each lanternfish's timer is only ever at most 8 days. That means you can group them together by the states of their timers (e.g. 5 that have 4 days left).
