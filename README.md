@@ -18,3 +18,7 @@ Space complexity is O(nm), from reading the entire input into memory.
 ### Day 4, part 1
 
 This challenge was pretty straight-forward, but instead of doing the obvious and making a grid for each board, I realized that all we're really interested in is whether the chosen numbers fill up a row or column. So I created a hashmap of numbers to boards, and incremented counters pertaining to the row and column they're in. This means I don't have to search through every board to find instances of the numbers, but instead can access them in constant time.
+
+### Day 5, part 1
+
+I started off with doing a solution that was optimal as possible (e.g. having lists of intervals rather than actually making the whole grid). But that was so much of a pain that I switched to just making a grid, and I'm glad I did since that was enough of a pain itself.
