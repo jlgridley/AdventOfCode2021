@@ -2,7 +2,7 @@ horizontal = 0
 depth = 0
 aim = 0
 
-with open("input", 'r') as f:
+with open("input2", 'r') as f:
     for line in f:
         direction, units = line.strip().split()
         units = int(units)
@@ -18,17 +18,17 @@ print(horizontal * depth)
 
 
 
-# horizontal = 0
-# depth = 0
-#
-# with open("input", 'r') as f:
-#     for line in f:
-#         direction, units = line.strip().split()
-#         if direction == "forward":
-#             horizontal += int(units)
-#         elif direction == "down":
-#             depth += int(units)
-#         else:
-#             depth -= int(units)
-#
-# print(horizontal * depth)
+horizontal = 0
+depth = 0
+
+with open("input2", 'r') as f:
+    for line in f:
+        direction, units = line.strip().split()
+        if direction == "forward":
+            horizontal += int(units)
+        elif direction == "down":
+            depth += int(units)
+        else:
+            depth -= int(units)
+
+print(horizontal * depth)

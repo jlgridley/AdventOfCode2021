@@ -72,64 +72,64 @@ print(overlaps)
 
 
 # Part 1:
-#
-# from math import inf
-#
-# lowestx = inf
-# lowesty = inf
-# highestx = -inf
-# highesty = -inf
-#
-# coordinates = []
-# with open("input5") as f:
-#     for line in f:
-#         start_coordinates, end_coordinates = line.strip().split(" -> ")
-#         startx, starty = map(int, start_coordinates.split(","))
-#         endx, endy = map(int, end_coordinates.split(","))
-#         if startx == endx:
-#             miny = min(starty, endy)
-#             endy = max(starty, endy)
-#             starty = miny
-#         elif starty == endy:
-#             minx = min(startx, endx)
-#             endx = max(startx, endx)
-#             startx = minx
-#         else:
-#             continue
-#         coordinates.append(((startx, starty), (endx, endy)))
-#         lowestx = min(lowestx, startx)
-#         lowesty = min(lowesty, starty)
-#         highestx = max(highestx, endx)
-#         highesty = max(highesty, endy)
-#
-# grid = [[0 for i in range(highestx - lowestx + 1)] for j in range(highesty - lowesty + 1)]
-# # print(lowestx, highestx)
-# # print(lowesty, highesty)
-# # print(grid)
-#
-# overlaps = 0
-# # print("len(coordinates)", len(coordinates))
-# for start, end in coordinates:
-#     # print(start, end)
-#     startx, starty = start
-#     endx, endy = end
-#     if startx == endx:
-#         for i in range(starty-lowesty, endy-lowesty + 1):
-#             grid[i][startx-lowestx] += 1
-#             if grid[i][startx-lowestx] == 2:
-#                 overlaps += 1
-#     elif starty == endy:
-#         for i in range(startx-lowestx, endx-lowestx + 1):
-#             grid[starty-lowesty][i] += 1
-#             if grid[starty-lowesty][i] == 2:
-#                 overlaps += 1
-#         # for row in grid:
-#         #     print(row)
-#         # print()
-#     else:
-#         assert False
-#
-# print(overlaps)
+
+from math import inf
+
+lowestx = inf
+lowesty = inf
+highestx = -inf
+highesty = -inf
+
+coordinates = []
+with open("input5") as f:
+    for line in f:
+        start_coordinates, end_coordinates = line.strip().split(" -> ")
+        startx, starty = map(int, start_coordinates.split(","))
+        endx, endy = map(int, end_coordinates.split(","))
+        if startx == endx:
+            miny = min(starty, endy)
+            endy = max(starty, endy)
+            starty = miny
+        elif starty == endy:
+            minx = min(startx, endx)
+            endx = max(startx, endx)
+            startx = minx
+        else:
+            continue
+        coordinates.append(((startx, starty), (endx, endy)))
+        lowestx = min(lowestx, startx)
+        lowesty = min(lowesty, starty)
+        highestx = max(highestx, endx)
+        highesty = max(highesty, endy)
+
+grid = [[0 for i in range(highestx - lowestx + 1)] for j in range(highesty - lowesty + 1)]
+# print(lowestx, highestx)
+# print(lowesty, highesty)
+# print(grid)
+
+overlaps = 0
+# print("len(coordinates)", len(coordinates))
+for start, end in coordinates:
+    # print(start, end)
+    startx, starty = start
+    endx, endy = end
+    if startx == endx:
+        for i in range(starty-lowesty, endy-lowesty + 1):
+            grid[i][startx-lowestx] += 1
+            if grid[i][startx-lowestx] == 2:
+                overlaps += 1
+    elif starty == endy:
+        for i in range(startx-lowestx, endx-lowestx + 1):
+            grid[starty-lowesty][i] += 1
+            if grid[starty-lowesty][i] == 2:
+                overlaps += 1
+        # for row in grid:
+        #     print(row)
+        # print()
+    else:
+        assert False
+
+print(overlaps)
 
 
 
