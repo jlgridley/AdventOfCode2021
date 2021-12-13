@@ -25,18 +25,10 @@ def getMapping(patterns):
         numbers = {1,2,3,4,5,6,7,8,9,0}
         works = True
         wordToNumber = {}
-        # if permutation == ('d', 'e', 'a', 'f', 'g', 'b', 'c'):
-        #     print(permutation)
         for pattern in patterns:
-            # if permutation == ('d', 'e', 'a', 'f', 'g', 'b', 'c'):
-            #     print(pattern)
             translation = []
             for char in pattern:
-                # if permutation == ('d', 'e', 'a', 'f', 'g', 'b', 'c'):
-                #     print(ord(char)-ord('a'), permutation[ord(char)-ord('a')])
                 translation.append(permutation[ord(char)-ord('a')])
-            # if permutation == ('d', 'e', 'a', 'f', 'g', 'b', 'c'):
-            #     print(sorted(translation))
             word = tuple(sorted(translation))
             if word not in segmentsToNumber or \
                segmentsToNumber[word] not in numbers:
@@ -46,12 +38,8 @@ def getMapping(patterns):
                 break
             numbers.discard(segmentsToNumber[word])
             wordToNumber[tuple(sorted(pattern))] = segmentsToNumber[word]
-            # if permutation == ('c', 'f', 'g', 'a', 'b', 'd', 'e'):
-            #     print(sorted(translation), segmentsToNumber[tuple(sorted(translation))])
         if works:
             return wordToNumber
-
-# acedgfb cdfbe gcdfa fbcad dab cefabd cdfgeb eafb cagedb ab | cdfeb fcadb cdfeb cdbaf
 
 
 sumOutputs = 0

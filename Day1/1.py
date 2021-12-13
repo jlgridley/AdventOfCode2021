@@ -23,12 +23,10 @@ line = 0
 """
 
 larger_measurement = 0
-
 with open("input1", 'r') as f:
     curr = None
     for line in f:
         if curr:
             larger_measurement += int(line) > curr
         curr = int(line)
-
 print(larger_measurement)
