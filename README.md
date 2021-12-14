@@ -26,3 +26,7 @@ I started off with doing a solution that was optimal as possible (e.g. having li
 ### Day 6, part 1
 
 The key to this one is to realize that each lanternfish's timer is only ever at most 8 days. That means you can group them together by the states of their timers (e.g. 5 that have 4 days left).
+
+### Day 11
+
+Really enjoyed this one. Game of Life is more interesting than I expected. Dumbo octopi are apparently adorable. Glad they weren't dying like in Game of Life instead of flashing, which is also adorable.
