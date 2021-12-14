@@ -30,3 +30,7 @@ The key to this one is to realize that each lanternfish's timer is only ever at 
 ### Day 11
 
 Really enjoyed this one. Game of Life is more interesting than I expected. Dumbo octopi are apparently adorable. Glad they weren't dying like in Game of Life instead of flashing, which is also adorable.
+
+### Day 12, part 2
+
+ngl, this one was tough and annoying.
