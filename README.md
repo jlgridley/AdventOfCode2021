@@ -34,3 +34,9 @@ Really enjoyed this one. Game of Life is more interesting than I expected. Dumbo
 ### Day 12, part 2
 
 ngl, this one was tough and annoying.
+
+### Day 14, part 2
+
+I may have been embarrassingly excited when my code printed the square that was expected after folding the transparent paper covered with dots.
+
+This one was enjoyable. I've been relieved to discover that after day 5 or so, the difficulty level no longer monotonically increases.
