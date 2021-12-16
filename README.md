@@ -35,7 +35,7 @@ Really enjoyed this one. Game of Life is more interesting than I expected. Dumbo
 
 ngl, this one was tough and annoying.
 
-### Day 14, part 2
+### Day 13, part 2
 
 I may have been embarrassingly excited when my code printed the square that was expected after folding the transparent paper covered with dots.
 
