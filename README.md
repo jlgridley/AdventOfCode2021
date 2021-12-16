@@ -40,3 +40,7 @@ ngl, this one was tough and annoying.
 I may have been embarrassingly excited when my code printed the square that was expected after folding the transparent paper covered with dots.
 
 This one was enjoyable. I've been relieved to discover that after day 5 or so, the difficulty level no longer monotonically increases.
+
+### Day 15
+
+I swore never to do Dijkstra again. Is it time to tap out?
