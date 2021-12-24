@@ -44,3 +44,15 @@ This one was enjoyable. I've been relieved to discover that after day 5 or so, t
 ### Day 15
 
 I swore never to do Dijkstra again. Is it time to tap out?
+
+### Day 16, part 1
+
+This one was really long and annoying.
+
+### Day 17, part 1
+
+Baby Gauss strikes again.
+
+### Day 17, part 2
+
+I thought about doing a slightly non-brute-force way of doing this, but it ended up being error-prone, so I just went with brute force, which terminated quickly (by design, presumably).

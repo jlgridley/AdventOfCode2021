@@ -1,6 +1,6 @@
 # Part 2
 
-with open("input") as f:
+with open("input16") as f:
     message = f.readline().strip()
 
 binList = []
@@ -11,36 +11,30 @@ for char in message:
 
 binStr = ''.join(binList)
 
-"""
-VVVTTTILLLLLLLLLLLLLLL
-000001000000000001011010110000110011100010010000
-len:22
-"""
-
 def getResult(type, vals):
     if type == 0:
         return sum(vals)
     if type == 1:
         product = 1
         for val in vals:
-            product *= 1
+            product *= val
         return product
     if type == 2:
         return min(vals)
     if type == 3:
         return max(vals)
     if type == 5:
-        return vals[0] > vals[1]
+        return int(vals[0] > vals[1])
     if type == 6:
-        return vals[0] < vals[1]
+        return int(vals[0] < vals[1])
     if type == 7:
-        return vals[0] == vals[1]
+        return int(vals[0] == vals[1])
 
 def getVersionFromPacket(packet):
-    print("packet:", packet)
+    # print("packet:", packet)
     curr = 0
     version = int(packet[curr:curr+3], 2)
-    print("version:", version)
+    # print("version:", version)
     curr += 3
     T = int(packet[curr:curr+3], 2)
     curr += 3
@@ -48,20 +42,30 @@ def getVersionFromPacket(packet):
         if packet[curr] == "0":
             curr += 1
             lenSubpackets = int(packet[curr:curr+15], 2)
-            print("lenSubpackets", lenSubpackets)
+            # print("lenSubpackets", lenSubpackets)
             curr += 15
             vals = []
-            while curr < lenSubpackets:
+            initial = curr
+            while curr < initial + lenSubpackets:
+                """
+                VVVTTTILLLLLLLLLLLLLLL
+                0000010000000000010110
+                len:22
+
+                VVVTTTAAAAA
+                10110000110011100010010000
+                """
                 retVersion, retCurr, val = getVersionFromPacket(packet[curr:])
                 version += retVersion
                 curr += retCurr
+                # print("version, curr, val", version, curr, val)
                 vals.append(val)
             res = getResult(T, vals)
             return version, curr, res
         elif packet[curr] == "1":
             curr += 1
             numSubpackets = int(packet[curr:curr+11], 2)
-            print("numSubpackets:", numSubpackets)
+            # print("numSubpackets:", numSubpackets)
             curr += 11
             vals = []
             for _ in range(numSubpackets):
