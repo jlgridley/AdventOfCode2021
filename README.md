@@ -56,3 +56,7 @@ Baby Gauss strikes again.
 ### Day 17, part 2
 
 I thought about doing a slightly non-brute-force way of doing this, but it ended up being error-prone, so I just went with brute force, which terminated quickly (by design, presumably).
+
+### Day 18
+
+Not sure I'm a fan of snailfish after this one.
